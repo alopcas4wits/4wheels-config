@@ -1,0 +1,93 @@
+logging:
+  level:
+    de.wits: DEBUG
+    #org.springframework.web: DEBUG
+    #org.springframework.security: DEBUG
+    #com.netflix.hystrix: DEBUG
+
+hystrix:
+  shareSecurityContext: true
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: THREAD
+          thread:
+            timeoutInMilliseconds: 10000
+
+eureka:
+  instance:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://registry-service:8761/eureka/
+
+security:
+  oauth2:
+    client:
+      clientId: ${spring.application.name}
+      accessTokenUri: http://auth-service:5000/oauth/token
+      grant-type: client_credentials
+      scope: server
+    resource:
+      id: ${spring.application.name}
+      load-balanced: true
+      jwt:
+        keyValue: ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAkhx/ESLR6wRq59TapZ+CEQwNO+O4pkL8+fOmjudPqamwMgexougTfrgzrR//tgmlj6yCnTDnJDMNV2otYpSLHJnUssFAEfPMMTI66ftUYcp6rNnfHNLdmgEY0PVVBlA9Rf9C0KHUmHi2LEnBZndZvyCxh5e4ygOpHvEV7nNcN8qxyfmJxotavFyPu7mfKXSRx1st/3coLGLq0mKY1FPIiCxdYtBusV2XClTLJuJDOXIStyFn4IPf1DQBxAXOgt9ilBpeL5au5axrnrb9FX+k+e3558rVbOn0Eel/UsBmnJ4p+b3xxpZTKblHBrCaO7HK44Vj+DahhBktihO4EapY8Q== rsa-key-20161106
+
+      userInfoUri: http://auth-service:5000/account/current
+
+
+cloud:
+  aws:
+    region:
+      static: eu-central-1
+    credentials:
+      accessKey: x
+      secretKey: x
+
+feign:
+  hystrix:
+    enabled: true
+
+spring:
+  devtools:
+    restart:
+      #additional-paths: /app
+  jpa:
+    # DEV CONFIGs
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        show_sql: false
+  #zipkin:
+  #  baseUrl:  http://zipkin-service:9411
+
+  datasource:
+    database: ${spring.application.name}
+    url: jdbc:mysql://db:3306/${spring.datasource.database}?autoReconnect=true&useSSL=false
+    username: ${spring.application.name}
+
+elasticmq:
+  enabled: true
+  url: http://queue:9324
+  topicUrl: http://sns:9911
+
+leader:
+  enabled: true
+  instanceId: ${spring.application.instance_id:${random.value}}
+
+
+migration:
+  enabled: true
+  fullAccess: true
+  jdbc:
+    url: jdbc:mysql://db:3306/
+    username: root
+    password: root
+
+event:
+  autoSetup: false

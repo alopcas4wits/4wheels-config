@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://172.16.252.1:1433;databaseName=4wheels_prod
+    username: 4wits
+    password: 4W1ts-DB-R3Ad0nly!
+    test-on-borrow: true
+    validation-query: SELECT 1 FROM dual
+  jpa:
+    show_sql: false
+
