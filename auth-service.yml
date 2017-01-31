@@ -1,0 +1,51 @@
+server:
+  port: 5000
+
+
+security:
+  oauth2:
+    resource:
+      jwt:
+        # 14 days for dev :)
+        expiration: 20160
+        privateKey: |
+          -----BEGIN RSA PRIVATE KEY-----
+          MIIEoQIBAAKCAQEAkhx/ESLR6wRq59TapZ+CEQwNO+O4pkL8+fOmjudPqamwMgex
+          ougTfrgzrR//tgmlj6yCnTDnJDMNV2otYpSLHJnUssFAEfPMMTI66ftUYcp6rNnf
+          HNLdmgEY0PVVBlA9Rf9C0KHUmHi2LEnBZndZvyCxh5e4ygOpHvEV7nNcN8qxyfmJ
+          xotavFyPu7mfKXSRx1st/3coLGLq0mKY1FPIiCxdYtBusV2XClTLJuJDOXIStyFn
+          4IPf1DQBxAXOgt9ilBpeL5au5axrnrb9FX+k+e3558rVbOn0Eel/UsBmnJ4p+b3x
+          xpZTKblHBrCaO7HK44Vj+DahhBktihO4EapY8QIBJQKCAQBiuU7v5xg3AvwgGjLe
+          nDVJyd9tp7QdT9tcxzkwH8A0XeXA8HEbC4LLPjDBFZ7wnrv5SwwlBV3oBtGpxEgt
+          2f0hKatkBgiyLxtD1dTHm/q+nZEoruLcH8YpyWPLdVUf8QbObjQQbVhLWHsXAWcA
+          C3P9rk5wX5iIfwORcnaaMkU6cyeGO18eeEQMGVH3jBcpyMIGGiQzaV7uY1fGNJz9
+          cJEVKQ1vAWaWeB/3XwL5VYWBTNH5Biy1afheTAQrG/Bx7rUoD5hJXT9tYsyOm38V
+          AX7KV0Ds3jts0JXegtdXDh1XDvsNYy+g917jqNY76Pdkz6HdsKIBp0k4xhIqoW5v
+          z0GtAoGBAO/GHvGgQs/wIVbxTy7bQSWBpU/kP/3+B+AktOyVVCyTmjKkPY/i/8fT
+          29kql0yUo6FSuZNMyStCtIJNqKItL41BncC4ZDjbEj+vZxCVutXjUw/53+JrNXow
+          aGeJJ0gmDfpRpDn/VyVDImulqa9uRnu+qRjKrFO94y8EylfFpzgRAoGBAJv/wCoX
+          6HgCAUSZfGKBAA+tUb0CU4kz8PlpnT7H6F7VQO3nFerQ87Rh9pFsjvOdwyYnDMWb
+          t3gu5ginM9K3TovFRtCPvO81gtQ6+SYteup6gC2uEq+Jnn1av3KvKBHChEE4IIXE
+          iWQGSw7z4VOzGUsaMwl9A1xJOc8neS19kvLhAoGAZ6+era0V+Q3k51OX3Okw7Z/Y
+          yJoN1Z5ImEc5exAkZk2qdsOQPjil9YwMCuH8PMqnn7UR+oIRzYShFcC3oBOKLz74
+          G/y1t7it8gapG+24k9fskUl1klffxiLFXTRkA4YT4d4dgN0exAFa/h4f3SjEiInM
+          lRlfRs6nbkdCviv1SK0CgYAqKXI0493268j9yJ4odeRXQ5mNB4wy63GPhFQDIUW4
+          xAO16221FeEAUdPv89ObycYKT75DPtej8P/mqbr6rhU6iFhUCywk+bSoD/BPgene
+          gfkhGko9R8n4XbczwKMLuAgRoHd+GXE9oNYECo/tG6X4n0wQZvn9RDkjOxnU8YGp
+          bQKBgQCkO7TAK12nKPB8ZagmsFd7BYCa2IbxB+bo2UL7BIxZRJzuuE2iM1NNGdCv
+          X1nf46rO4FwTfZVt18pBGtYzsYiWyvzYSt5E9sS6Bpdh+7k71TYwR+2gUy6ph1Ey
+          Hh4SSLO0HI8aYPWRaTtFPKon6wxP93WGvbfvYeRnrip4TwseDw==
+          -----END RSA PRIVATE KEY-----
+
+authentication:
+  username: admin
+  password: Test1234
+
+  clients:
+    - config-service
+    - gateway-service
+    - pdf-creation-service
+    - picture-service
+    - registry-service
+    - report-creation-service
+    - template-service
