@@ -1,0 +1,20 @@
+zuul:
+  sensitiveHeaders:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
+  routes:
+    websocket:
+        path: /ws
+        serviceId: report-creation-service
+        scriptPrefix: false
+
+    auth-service:
+        path: /uaa/**
+        serviceId: auth-service
+ 
+server:
+  port: 4000
+
