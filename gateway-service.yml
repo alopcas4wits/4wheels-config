@@ -11,7 +11,7 @@ zuul:
 
   routes:
     websocket:
-        path: /ws/**
+        path: /ws
         serviceId: report-creation-service
         scriptPrefix: false
 
