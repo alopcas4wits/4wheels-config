@@ -1,3 +1,7 @@
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 600000
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 600000
 zuul:
   sensitiveHeaders:
   ignoredServices: '*'
