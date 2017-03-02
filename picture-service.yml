@@ -1,2 +1,2 @@
 nav:
-  navisionEndpoint: http://35.156.247.122:1435/DynamicsNAV/WS/4Wheels%20Bilddatenbank/Codeunit/PictureWS
+  navisionEndpoint: http://172.16.250.142:8007/DynamicsNAV/WS/4Wheels%20Bilddatenbank/Codeunit/PictureWS
