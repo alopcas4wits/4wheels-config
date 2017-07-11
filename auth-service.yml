@@ -49,3 +49,4 @@ authentication:
     - registry-service
     - report-creation-service
     - template-service
+    - chart-service
