@@ -15,6 +15,11 @@ zuul:
         serviceId: report-creation-service
         scriptPrefix: false
 
+    healthcheck:
+        path: /status
+        serviceId: report-creation-service
+        scriptPrefix: false
+
     auth-service:
         path: /uaa/**
         serviceId: auth-service
