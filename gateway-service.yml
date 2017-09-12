@@ -23,7 +23,7 @@ zuul:
     download:
         path: /cached/**
         serviceId: report-creation-service
-        scriptPrefix: false
+        scriptPrefix: true
 
     auth-service:
         path: /uaa/**
