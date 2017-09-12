@@ -21,12 +21,12 @@ zuul:
         scriptPrefix: false
 
     download:
-        path: /cached/*
+        path: /cached
         serviceId: report-creation-service
         scriptPrefix: false
 
     list:
-        path: /cached/list/*
+        path: /cached/list
         serviceId: report-creation-service
         scriptPrefix: false
 
