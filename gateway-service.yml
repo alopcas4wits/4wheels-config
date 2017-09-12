@@ -20,6 +20,11 @@ zuul:
         serviceId: report-creation-service
         scriptPrefix: false
 
+    download:
+        path: /cached/**
+        serviceId: report-creation-service
+        scriptPrefix: false
+
     auth-service:
         path: /uaa/**
         serviceId: auth-service

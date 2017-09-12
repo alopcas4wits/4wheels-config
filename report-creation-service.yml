@@ -8,3 +8,6 @@ spring:
     validation-query: SELECT 1 FROM dual
   jpa:
     show_sql: false
+
+iris:
+  irisUri: https://iris20.4wheels.de
