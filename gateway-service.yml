@@ -31,6 +31,7 @@ zuul:
         scriptPrefix: false
 
     registry:
+        path: /eureka
         url: http://registry-service:8761/eureka 
         serviceId: registry-service
         scriptPrefix: false
