@@ -30,6 +30,11 @@ zuul:
         serviceId: report-creation-service
         scriptPrefix: false
 
+    registry:
+        url: http://registry-service:8761/eureka 
+        serviceId: registry-service
+        scriptPrefix: false
+
     auth-service:
         path: /uaa/**
         serviceId: auth-service
