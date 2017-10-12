@@ -10,4 +10,4 @@ spring:
     show_sql: false
 
 iris:
-  irisUri: https://172.16.252.111
+  irisUri: 172.16.252.111
